@@ -552,14 +552,14 @@ function Hero() {
           </motion.div>
           {/* Hero portrait */}
 <motion.div
-  className="hidden lg:block absolute right-8 xl:right-16 bottom-0 w-[380px] xl:w-[460px] pointer-events-none"
-  initial={{ opacity: 0, x: 60, y: 40 }}
-  animate={{ opacity: 1, x: 0, y: 0 }}
+className="hidden lg:block absolute right-8 xl:right-16 bottom-0 w-[380px] xl:w-[460px] pointer-events-none"  initial={{ opacity: 0, x: 60, y: 40 }}
+  animate={{ opacity: 0.7, x: 0, y: 0 }}
   transition={{ duration: 1.2, delay: 1.2, ease: [0.76, 0, 0.24, 1] }}
 >
-  {/* glow */}
-  <div className="absolute inset-0 blur-3xl opacity-50"
-       style={{ background: "radial-gradient(circle at 50% 70%, #6C5CE7, transparent 60%)" }} />
+  <div
+    className="absolute inset-0 blur-3xl opacity-50"
+    style={{ background: "radial-gradient(circle at 50% 70%, #6C5CE7, transparent 60%)" }}
+  />
   <img
     src="/me.png"
     alt="Sampada Brijpuriya"
@@ -627,6 +627,25 @@ function Hero() {
             LET'S WORK TOGETHER
           </MagneticButton>
         </motion.div>
+        {/* Mobile-only portrait below content */}
+<motion.div
+  className="block lg:hidden mt-12 flex justify-center"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, delay: 1.4, ease: [0.76, 0, 0.24, 1] }}
+>
+  <div className="relative w-[240px] sm:w-[280px]">
+    <div
+      className="absolute inset-0 blur-3xl opacity-40"
+      style={{ background: "radial-gradient(circle at 50% 60%, #6C5CE7, transparent 65%)" }}
+    />
+    <img
+      src="/me.png"
+      alt="Sampada Brijpuriya"
+      className="relative w-full h-auto object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
+    />
+  </div>
+</motion.div>
       </div>
 
       <motion.div
